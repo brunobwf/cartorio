@@ -1,5 +1,6 @@
 package br.com.cartorio.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -21,7 +22,7 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_cartorio")
-public class Cartorio {
+public class Cartorio implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -34,7 +35,4 @@ public class Cartorio {
 	@OneToMany(mappedBy = "cartorio", cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Certidao> certidoes;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 }

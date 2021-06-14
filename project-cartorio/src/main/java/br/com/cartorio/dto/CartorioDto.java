@@ -1,5 +1,6 @@
 package br.com.cartorio.dto;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CartorioDto {
+public class CartorioDto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -20,10 +21,6 @@ public class CartorioDto {
 	private String nome;
 	private String endereco;
 	private List<CertidaoDto> certidoes;
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 
 	public CartorioDto(Cartorio cartorio) {
 		this.id = cartorio.getId();

@@ -1,5 +1,7 @@
 package br.com.cartorio.dto;
 
+import java.io.Serializable;
+
 import br.com.cartorio.model.Certidao;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,16 +10,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CertidaoDto {
+public class CertidaoDto implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Long id;
 	private String nome;
 	private Long idCartorio;
-	
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 	
 	public CertidaoDto(Certidao certidao) {
 		this.id = certidao.getId();
