@@ -14,7 +14,7 @@ import br.com.cartorio.model.Certidao;
 import br.com.cartorio.service.CertidaoService;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/certidao")
 public class CertidaoController {
 
 	@Autowired
